@@ -1,0 +1,263 @@
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+header img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Sección principal con imagen o video de fondo */
+.principal {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La sección ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* La imagen de fondo está detrás del contenido */
+}
+
+.overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen cubre todo el espacio de la sección */
+}
+
+.contenido-principal {
+    position: relative;
+    z-index: 1; /* El contenido está por encima de la imagen */
+    text-align: center;
+    color: white;
+}
+
+.contenido-principal h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contenido-principal p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn-explorar {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-explorar:hover {
+    background-color: #e68a00;
+}
+
+/* Secciones de contenido */
+.seccion {
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.seccion:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.seccion h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.seccion p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.seccion img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Bloques de contenido alternados (imagen a la izquierda y derecha) */
+.seccion:nth-child(even) .contenido-texto {
+    order: 1;
+}
+
+.seccion:nth-child(even) .contenido-imagen {
+    order: 2;
+}
+
+.seccion:nth-child(odd) .contenido-imagen {
+    order: 1;
+}
+
+.seccion:nth-child(odd) .contenido-texto {
+    order: 2;
+}
+
+.contenido-texto {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.contenido-imagen {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Mejora de botones dentro de las secciones */
+.seccion a.btn {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.seccion a.btn:hover {
+    background-color: #e68a00;
+}
+
+/* Galería de imágenes */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria img {
+    width: calc(33.333% - 10px);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Testimonios */
+.testimonios {
+    padding: 40px 20px;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.testimonios blockquote {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-left: 5px solid #ff9900;
+}
+
+.testimonios cite {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Pie de página */
+footer {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ff9900;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .redes-sociales {
+    margin-top: 10px;
+}
+
+footer .redes-sociales a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: white;
+}
+
+footer .redes-sociales a:hover {
+    color: #ff9900;
+}
